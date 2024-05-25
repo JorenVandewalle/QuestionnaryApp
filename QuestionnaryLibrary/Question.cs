@@ -19,7 +19,7 @@ namespace QuestionnaryLibrary
             possibleAnswer = new List<Answer>();
         }
 
-        public Add(Answer answer)
+        public void Add(Answer answer)
         {
             possibleAnswer.Add(answer);
         }
@@ -27,6 +27,12 @@ namespace QuestionnaryLibrary
         public Answer GetAnswer(int index)
         {
             return possibleAnswer[index];
+        }
+
+        // Return the list
+        public List<Answer> Answers
+        {
+            get { return new List<Answer>(possibleAnswer); }
         }
 
         public override string ToString()

@@ -33,19 +33,5 @@ namespace QuestionnaryWpf
             this.Close();
             mainWindow.Show();
         }
-
-        private void Github_Navigate(object sender, RoutedEventArgs e)
-        {
-            static void OpenLink(string url)
-            {
-                ProcessStartInfo psi = new ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true
-                };
-               Process.Start(psi);
-            }
-            OpenLink(e.Uri.AbsoluteUri);
-        }
     }
 }

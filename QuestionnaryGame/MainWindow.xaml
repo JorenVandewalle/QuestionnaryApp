@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuestionnaryGame"
         mc:Ignorable="d"
-        Title="Questionnary" Height="450" Width="800" Background="#3f6175" Foreground="Wheat" FontSize="20">
+        Title="Questionnary" MinHeight="450" MinWidth="800" Height="450" Width="800" Background="#30383d" Foreground="Gold" FontSize="17">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
@@ -33,15 +33,69 @@
 
         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="11" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Questionnary Game" FontWeight="Bold" FontSize="40"/>
 
-        <TextBlock Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="9" VerticalAlignment="Center" Text="Question: This is just to look how it looks, nothing else"/>
+        <StackPanel x:Name="questionaryGame" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="9" Grid.RowSpan="6" VerticalAlignment="Stretch" Visibility="Hidden">
+            <Grid Height="334">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
 
-        <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="7" VerticalAlignment="Center" HorizontalContentAlignment="Left" Content="FirstAnswer" Background="#6390ab" Foreground="Wheat"/>
-        <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="7" VerticalAlignment="Center" HorizontalContentAlignment="Left" Content="SecondAnswer" Background="#6390ab" Foreground="Wheat"/>
-        <Button Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="7" VerticalAlignment="Center" HorizontalContentAlignment="Left" Content="ThirdAnswer" Background="#6390ab" Foreground="Wheat"/>
-        <Button Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="7" VerticalAlignment="Center" HorizontalContentAlignment="Left" Content="FourthAnswer" Background="#6390ab" Foreground="Wheat"/>
+                <TextBlock x:Name="QuestionText" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="9" VerticalAlignment="Center" Text="Question"/>
 
-        <Image Grid.Row="3" Grid.Column="8" Grid.RowSpan="4" Grid.ColumnSpan="2" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Source="C:\Introduction to programming\OOP evaluaties\Evaluatie 4\QuestionnaryApp\Images\Person_icon.png"/>
+                <Button x:Name="FirstAnswerText" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center" HorizontalContentAlignment="Left" Content="FirstAnswer" Background="#1a3747" Foreground="Gold" BorderBrush="Gold" BorderThickness="2" Padding="5" Click="First_Answer"/>
+                <Button x:Name="SecondAnswerText" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center" HorizontalContentAlignment="Left" Content="SecondAnswer" Background="#1a3747" Foreground="Gold" BorderBrush="Gold" BorderThickness="2" Padding="5" Click="Second_Answer"/>
+                <Button x:Name="ThirdAnswerText" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center" HorizontalContentAlignment="Left" Content="ThirdAnswer" Background="#1a3747" Foreground="Gold" BorderBrush="Gold" BorderThickness="2" Padding="5" Click="Third_Answer"/>
+                <Button x:Name="FourthAnswerText" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center" HorizontalContentAlignment="Left" Content="FourthAnswer" Background="#1a3747" Foreground="Gold" BorderBrush="Gold" BorderThickness="2" Padding="5" Click="Fourth_Answer"/>
 
-        <Button Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="3" Content="About" Margin="10" Background="#6390ab" Foreground="Wheat" Click="About_Click"/>
+                <TextBlock x:Name="ScoreCounter" Grid.Row="2" Grid.Column="7" Grid.ColumnSpan="2" Foreground="Gold" Text="Score:" VerticalAlignment="Center" FontWeight="Bold" FontSize="25"/>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel x:Name="firstPage" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="9" Grid.RowSpan="6" VerticalAlignment="Stretch">
+            <Grid Height="334">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Username:" FontSize="25"/>
+                <TextBox x:Name="userName" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="5" Background="#1a3747" Foreground="Gold" BorderBrush="Gold" BorderThickness="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+                <Button Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3" Background="#1a3747" Foreground="Gold" BorderBrush="Gold" BorderThickness="2" Content="Start Game" FontSize="22" Click="Button_Click"/>
+            </Grid>
+        </StackPanel>
+
+        <Button Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="3" Content="Scoreboard" Margin="10" Background="#1a3747" Foreground="Gold" BorderBrush="Gold" BorderThickness="2" Click="Scoreboard_Click"/>
+        <Button Grid.Row="7" Grid.Column="8" Content="About" Margin="10" Background="#1a3747" Foreground="Gold" BorderBrush="Gold" BorderThickness="2" Click="About_Click"/>
     </Grid>
 </Window>

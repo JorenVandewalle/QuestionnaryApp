@@ -8,8 +8,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuestionnaryLibrary", "QuestionnaryLibrary\QuestionnaryLibrary.csproj", "{8E4FB698-5EA3-48B4-84E2-325B215BC49C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuestionnaryWpf", "QuestionnaryGame\QuestionnaryWpf.csproj", "{926D6245-EB4B-45E4-8623-DCB9FB3D4C35}"
+	ProjectSection(ProjectDependencies) = postProject
+		{348859E9-F27D-4C9A-8AB9-97037456F1C9} = {348859E9-F27D-4C9A-8AB9-97037456F1C9}
+		{D640A1CE-86AF-4B42-88C2-5BCB23C81A04} = {D640A1CE-86AF-4B42-88C2-5BCB23C81A04}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriviaApiLibrary", "TriviaApiLibrary\TriviaApiLibrary.csproj", "{D640A1CE-86AF-4B42-88C2-5BCB23C81A04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreboardLibrary", "ScoreboardLibrary\ScoreboardLibrary.csproj", "{348859E9-F27D-4C9A-8AB9-97037456F1C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,10 @@ Global
 		{D640A1CE-86AF-4B42-88C2-5BCB23C81A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D640A1CE-86AF-4B42-88C2-5BCB23C81A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D640A1CE-86AF-4B42-88C2-5BCB23C81A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{348859E9-F27D-4C9A-8AB9-97037456F1C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{348859E9-F27D-4C9A-8AB9-97037456F1C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{348859E9-F27D-4C9A-8AB9-97037456F1C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{348859E9-F27D-4C9A-8AB9-97037456F1C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

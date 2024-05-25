@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuestionnaryWpf"
         mc:Ignorable="d"
-        Title="About Page" Height="450" Width="800" Background="#3f6175" Foreground="Wheat" FontSize="20">
+        Title="About Page" Height="450" Width="800" Background="#30383d" Foreground="Gold" FontSize="17">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
@@ -31,10 +31,12 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        
 
-        <Button Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="3" Margin="10" Content="Github" Background="#6390ab" Foreground="Wheat" Click="Github_Navigate"/>
 
-        <Button Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="3" Content="Questionnary Game" Margin="10" Background="#6390ab" Foreground="Wheat" Click="MainWindow_Click"/>
+
+        <Button Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="3" Margin="10" Background="#1a3747" Content="Github" Foreground="Gold" BorderBrush="Gold" BorderThickness="2"/>
+
+
+        <Button Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="3" Content="Questionnary Game" Margin="10" Background="#1a3747" Foreground="Gold" BorderBrush="Gold" BorderThickness="2" Click="MainWindow_Click"/>
     </Grid>
 </Window>
