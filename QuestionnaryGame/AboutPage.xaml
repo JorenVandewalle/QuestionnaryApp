@@ -31,7 +31,7 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-
+        <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="7" Grid.RowSpan="6" ><Run Text="Project Description"/><LineBreak/><Run Text="The Questionnary Game is a trivia quiz application implemented in WPF. It features a friendly user interface where users can answer multiple-choice questions, track their scores, and view a scoreboard."/><LineBreak/><Run/><LineBreak/><Run Text="- "/><Run Text="ConsoleApp: This is to test the classes."/><LineBreak/><Run Text="- "/><Run Text="MainWindow: The main question game."/><LineBreak/><Run Text="- "/><Run Text="ScoreboardWindow: The scoreboard."/><LineBreak/><Run Text="- "/><Run Text="TriviaApiLibrary: Retrieves trivia questions from an API."/><LineBreak/><Run Text="- "/><Run Text="QuestionnaryLibrary: Manages question and answers."/><LineBreak/><Run Text="- "/><Run Text="ScoreboardLibrary: Manages the scoreboard and player scores."/><LineBreak/><Run/><LineBreak/><Run Text="Author"/><LineBreak/><Run Text="Joren Vandewalle"/></TextBlock>
 
 
         <Button Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="3" Margin="10" Background="#1a3747" Content="Github" Foreground="Gold" BorderBrush="Gold" BorderThickness="2"/>
